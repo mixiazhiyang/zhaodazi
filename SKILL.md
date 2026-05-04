@@ -1,7 +1,7 @@
 ---
-name: 找搭子
+name: dazi
 description: 小红书智能找搭子 - 搜索帖子、质量筛选、智能评论、回复监控、表格记录
-aliases: [xhs-find, xhs-find-dazi, zhaodazi, 小红书找搭子, 找伴, 搭子]
+aliases: [找搭子, xhs-find, xhs-find-dazi, zhaodazi, 小红书找搭子, 找伴, 搭子]
 ---
 
 # 小红书 AI 找搭子
