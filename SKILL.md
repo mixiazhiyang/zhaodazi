@@ -7,9 +7,29 @@ description: 小红书智能找搭子 - 搜索帖子、质量筛选、智能评�
 
 根据用户需求，自动在小红书搜索相关帖子，智能筛选真人帖子，生成个性化评论引流到私信，监控回复，记录追踪防止重复。
 
-**底层工具**: `xiaohongshu-cli` (jackwener/xiaohongshu-cli) — 逆向 API，不用浏览器，内置反检测。
+**底层工具**: `xiaohongshu-cli` ([jackwener/xiaohongshu-cli](https://github.com/jackwener/xiaohongshu-cli)) — 逆向 API，不用浏览器，内置反检测。
 
 **微信/飞书集成**: 参考 [WECHAT-ADAPTER.md](./WECHAT-ADAPTER.md) 了解如何通过即时通讯工具使用本功能。很重要，因为这个skill很重要的功能就是和微信、飞书等工具打通使用，需要了解适配的技能。
+
+## 前置要求
+
+### 1. 安装 xiaohongshu-cli
+
+```bash
+pip install xiaohongshu-cli
+```
+
+### 2. 登录小红书账号
+
+使用二维码登录：
+
+```bash
+xhs login --qrcode
+```
+
+扫码后 Cookie 会自动保存，有效期约 7 天。过期后重新执行登录命令即可。
+
+详细说明参考 [xiaohongshu-cli 文档](https://github.com/jackwener/xiaohongshu-cli)。
 
 ## 触发条件
 
@@ -260,13 +280,13 @@ comment_time,feed_id,comment_id,post_url,author_name,author_id,post_content,post
 
 ## Cookie 管理
 
-Cookie 存储在 `~/.xiaohongshu-cli/cookies.json`，有效期 7 天。
-过期后执行 `xhs login` 重新提取（需 Chrome 已登录 xiaohongshu.com）。
-或使用二维码登录：`PYTHONIOENCODING=utf-8 xhs login --qrcode`
+Cookie 由 xiaohongshu-cli 自动管理，存储在 `~/.xiaohongshu-cli/cookies.json`，有效期约 7 天。
+
+过期后执行 `xhs login --qrcode` 重新登录即可。
 
 ## 文件结构
 
-**工作目录**: `./dazi/`
+**工作目录**: `./dazi/`（相对于 skill 执行目录）
 
 所有生成的文件都保存在 skill 目录下的 `dazi` 子目录，与 skill 文件分离。
 

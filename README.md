@@ -129,6 +129,10 @@ copy zhaodazi\SKILL.md %USERPROFILE%\.claude\skills\xhs-find-dazi.md
 
 MIT
 
+## 致谢
+
+本项目基于 [xiaohongshu-cli](https://github.com/jackwener/xiaohongshu-cli) 构建，感谢 [@jackwener](https://github.com/jackwener) 提供的强大底层工具。
+
 ## 相关链接
 
 - [xiaohongshu-cli](https://github.com/jackwener/xiaohongshu-cli) - 小红书命令行工具
