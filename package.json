@@ -1,0 +1,32 @@
+{
+  "name": "@mixiazhiyang/xhs-find-dazi",
+  "version": "1.0.0",
+  "description": "Claude Code skill for finding activity partners on Xiaohongshu (小红书找搭子)",
+  "keywords": [
+    "claude-code",
+    "skill",
+    "xiaohongshu",
+    "xhs",
+    "dating",
+    "social",
+    "automation",
+    "wechat-bot"
+  ],
+  "author": "mixiazhiyang",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mixiazhiyang/xhs-find-dazi.git"
+  },
+  "files": [
+    "SKILL.md",
+    "WECHAT-ADAPTER.md",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "xiaohongshu-cli": ">=1.0.0"
+  },
+  "scripts": {
+    "postinstall": "echo '\n⚠️  Please install xiaohongshu-cli: npm install -g xiaohongshu-cli\n'"
+  }
+}

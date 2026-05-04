@@ -1,0 +1,14 @@
+node_modules/
+*.log
+.DS_Store
+
+# 用户数据文件
+dazi/
+
+# 测试文件
+*.test.json
+test-*.csv
+
+# Git 文件
+.git/
+.gitignore
