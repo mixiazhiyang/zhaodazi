@@ -13,18 +13,32 @@ Claude Code skill，用于在小红书自动搜索、筛选、评论和监控回
 
 ## 安装
 
-```bash
-npm install @mixiazhiyang/xhs-find-dazi
-```
+### 1. 安装前置依赖
 
-## 前置依赖
-
-需要先安装 [xiaohongshu-cli](https://github.com/ReaJason/xiaohongshu-cli)：
+需要先安装 [xiaohongshu-cli](https://github.com/jackwener/xiaohongshu-cli)：
 
 ```bash
 pip install xiaohongshu-cli
 xhs login --qrcode
 ```
+
+### 2. 添加 Skill 到 Claude Code
+
+将本仓库的 `SKILL.md` 文件添加到你的 Claude Code skills 目录：
+
+```bash
+# 克隆仓库
+git clone https://github.com/mixiazhiyang/zhaodazi.git
+
+# 复制 skill 文件到 Claude Code skills 目录
+# macOS/Linux:
+cp zhaodazi/SKILL.md ~/.claude/skills/xhs-find-dazi.md
+
+# Windows:
+copy zhaodazi\SKILL.md %USERPROFILE%\.claude\skills\xhs-find-dazi.md
+```
+
+或者直接从 GitHub 下载 `SKILL.md` 文件放到 skills 目录。
 
 ## 使用方法
 
@@ -45,7 +59,7 @@ xhs login --qrcode
 我想找 [找搭子的目的]
 ```
 
-配置会保存到 `./dazi/config.json`，后续可以修改。
+配置会保存到 `./dazi/config.json`（相对于当前工作目录），后续可以修改。
 
 ### 回复监控
 
@@ -59,7 +73,7 @@ xhs login --qrcode
 
 ## 配置文件
 
-所有数据保存在 `./dazi/` 目录：
+所有数据保存在 `./dazi/` 目录（相对于执行命令的目录）：
 
 - `config.json` - 用户配置（profile、黑名单、偏好）
 - `interactions.csv` - 互动历史记录
@@ -109,6 +123,7 @@ xhs login --qrcode
 - 首次使用前务必配置个人 profile，让评论更自然
 - 定期检查回复，及时响应感兴趣的搭子
 - 黑名单关键词可根据实际情况调整
+- 确保 xiaohongshu-cli 已登录（`xhs login --qrcode`）
 
 ## 许可证
 
@@ -116,5 +131,5 @@ MIT
 
 ## 相关链接
 
-- [xiaohongshu-cli](https://github.com/ReaJason/xiaohongshu-cli)
-- [Claude Code](https://claude.ai/code)
+- [xiaohongshu-cli](https://github.com/jackwener/xiaohongshu-cli) - 小红书命令行工具
+- [Claude Code](https://claude.ai/code) - Claude 官方 CLI 工具
