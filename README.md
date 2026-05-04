@@ -14,7 +14,7 @@ Claude Code skill，用于在小红书自动搜索、筛选、评论和监控回
 ## 安装
 
 ```bash
-npm install @your-scope/xhs-find-skill
+npm install @mixiazhiyang/xhs-find-dazi
 ```
 
 ## 前置依赖
